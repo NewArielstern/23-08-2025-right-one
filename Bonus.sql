@@ -1,7 +1,21 @@
 ---1
+CREATE TABLE tourists_trip(
+	tourist_id INTEGER REFERENCES tourists(id),
+	tour_id INTEGER REFERENCES tours(id),	
+	PRIMARY KEY (tourist_id ,tour_id));
 
+INSERT INTO tourists_trip(tourist_id ,tour_id) VALUES 
+(1,2),
+(2,3),
+(3,4),
+(3,6),
+(3,7),
+(5,9),
+(6,7),
+(2,1);
 
-
+-- SELECT tourists.first_name,tourists_trip.* FROM tourists
+-- JOIN tourists_trip ON tourists.id = tourists_trip.tourist_id;
 
 ---2
 CREATE OR REPLACE FUNCTION get_revenue_per_year(year_t INTEGER)
