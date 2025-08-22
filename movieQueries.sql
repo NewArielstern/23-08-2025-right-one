@@ -10,8 +10,7 @@ ORDER BY year;
 SELECT genre,AVG(revenue) AS avg_revenue FROM movies
 GROUP BY genre
 order by genre;
--- SELECT AVG(revenue) FROM movies
--- WHERE genre like 'Action';
+
 
 ---4
 SELECT genre,language,AVG(revenue) AS avg_revenue FROM movies
